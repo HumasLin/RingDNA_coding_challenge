@@ -23,14 +23,16 @@ In the program, the structure of information is shown as:
 By assembling the information contained in a customer's record, the program can generate a statement containing the specific information of rentals and the account summary information of the customer.
 
 The codes in the `lib/` directory are:
- - `customer.py`: define the `Customer` object with name and rental records
- - `movie.py`: define the `Movie` object with title and price code
- - `rental.py`: define the `Rental` object with associated movie and rented days, with computation on billing and rewards based on predefined logics
- - `statement.py`: define the `Statement` object that assembles customer records 
- - `utils.py`: contain variables that define the logic of billing and rewards
+ - `customer.py`: define the `Customer` object with name and rental records;
+ - `movie.py`: define the `Movie` object with title and price code;
+ - `rental.py`: define the `Rental` object with associated movie and rented days, with computation on billing and rewards based on predefined logics;
+ - `statement.py`: define the `Statement` object that assembles customer records;
+ - `utils.py`: contain variables that define the logic of billing and rewards, including `logic` and price codes;
 
 Demonstration
 -------------
+*To run the following programs, please make sure your current directory is `RingDNA_coding_challenge`*
+
 There are two programs that demonstrate the functionalily of the code:
 
 * `demo.py`: In this program, a customer instance is created first, with three rental instances associated with three movies added to his record. Then the first statement is generated and displayed. Then, with a new rental instance associated with a new movie added to customer record, a new statement is generated and displayed. This program demonstrates that statement is independent of the customer.
