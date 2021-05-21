@@ -6,4 +6,6 @@ Given the reorganization of the codes, I think it's good to talk a little bit ab
 
 - I removed the get_ functions (e.g, `get_name()` in the original version for Customer), as it's sufficient now to just source the attribute of the certain object in Python. The get_ functions acutally can make the code more messy. If API in further development would need those functions, it can also be easily recreated.
 
+- In the test file, I only include one kind of movie as for current tests, it's more reasonable to run only one movie instance, so that the test can find out if the computation on one specific logic of billing and rewards works. This makes sure the error can be pinpointed easily. Also, if only one movie is tested each time, it'll be simple to modify the test based on the instance of interest. 
+
 I'll be glad to further discuss more about my decisions in transforming the codes if you have any questions!
