@@ -9,6 +9,7 @@ class TestSystem(unittest.TestCase):
 
 	""" Initialize instances for test """
 	def setUp(self):
+		""" test for only one sort of movie """
 		self.movie = Movie("Test Movie", CLASSIC)
 
 		self.customer = Customer("Scott")
@@ -30,8 +31,8 @@ class TestSystem(unittest.TestCase):
 
 	""" Test billing computation """
 	def test_rental_amount(self):	
-		self.assertEqual(self.rental1.get_amount(),1, "Start Rewards Error")	
-		self.assertEqual(self.rental2.get_amount(),3, "Start Rewards Error")
+		self.assertEqual(self.rental1.get_amount(), 1, "Start Billing Error")	
+		self.assertEqual(self.rental2.get_amount(), 3, "Additonal Billing Error")
 
 	""" Test rewards program computation """
 	def test_rental_point(self):
@@ -40,9 +41,11 @@ class TestSystem(unittest.TestCase):
 
 	""" Test statement update """
 	def test_statement_update(self):
+		""" initial statement """
 		self.customer.add_rental(self.rental1)
 		statement_content = Statement(self.customer).content
 		self.assertEqual(statement_content[1],"\t Test Movie \t 1\n", "Add rental failed")
+		""" updated statement """
 		self.customer.add_rental(self.rental2)
 		statement_content = Statement(self.customer).content
 		self.assertEqual(statement_content[2],"\t Test Movie \t 3\n", "Update rental failed")
