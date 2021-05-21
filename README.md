@@ -39,13 +39,13 @@ There are two programs that demonstrate the functionalily of the code:
 
 * The demonstration code can be run by:
 ```
-	python3 demo.py
+python3 demo.py
 ```
 
 * `system_test.py`: In this test, the program tests the creation of movies and rentals (function 1 and 2), the computation of billing and rewards (function 3 and 4), and the generation of statement (function 5 and 6). There are 6 tests in total.
 
 * To test the modules in the program, the unit test program can be run by:
 ```
-	python3 -m unittest system_test.py
+python3 -m unittest system_test.py
 ```
-*python3 can be replaced by python if necessary*
+*P.S.: python3 can be replaced by python if necessary*
