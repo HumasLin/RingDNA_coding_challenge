@@ -1,5 +1,6 @@
 from lib.utils import *
 
+""" Define the class of movie """
 class Movie:
 
     def __init__(self, title: str, price_code: int):

@@ -1,6 +1,7 @@
 from lib.utils import *
 from lib.movie import Movie
 
+""" Define the class of rental """
 class Rental:
 
     def __init__(self, movie: Movie, days_rented: int=0):

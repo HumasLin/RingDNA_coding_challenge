@@ -1,5 +1,6 @@
 from lib.rental import Rental
 
+""" Define the class of customer """
 class Customer:
 
     def __init__(self, name: str, rentals: list=[]):
